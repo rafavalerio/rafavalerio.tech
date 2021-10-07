@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import ProfilePic from './raf.jpg';
+import ProfilePic from "./raf.jpg";
 
 const float = keyframes`
   0% {
@@ -31,7 +31,7 @@ const Photo = styled.div`
   background-image: url(${ProfilePic});
   background-position: center;
   background-size: contain;
-  border: 5px solid #FFF;
+  border: 5px solid #fff;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -51,12 +51,16 @@ const SubTitle = styled.h2`
 `;
 
 const Content = styled.div`
+  display: flex;
+  margin: 1em;
+`;
+
+const Pill = styled.span`
   background: #e36588;
   padding: 0.5em 1em;
-  margin: 0.6em;
+  margin: 0.2em;
   border-radius: 25px;
   color: #9a275a;
-  font-size: 1em;
   font-weight: 600;
 `;
 
@@ -64,13 +68,13 @@ function App() {
   return (
     <AppWrapper>
       <Photo></Photo>
-      <Title>
-        Rafael Valerio
-      </Title>
-      <SubTitle>
-        Lead Developer
-      </SubTitle>
-      <Content>REA / Bunnings / BuildPass</Content>
+      <Title>Rafael Valerio</Title>
+      <SubTitle>Lead Developer</SubTitle>
+      <Content>
+        <Pill>REA</Pill>
+        <Pill>Bunnings</Pill>
+        <Pill>BuildPass</Pill>
+      </Content>
     </AppWrapper>
   );
 }
