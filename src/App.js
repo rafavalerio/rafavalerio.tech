@@ -1,53 +1,76 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+import ProfilePic from './raf.jpg';
+
+const float = keyframes`
+  0% {
+		transform: translatey(0px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.4);
+	}
+	50% {
+		transform: translatey(-10px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+	}
+	100% {
+		transform: translatey(0px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.4);
+	}
+`;
 
 const AppWrapper = styled.div`
-  background-color: rgba(230, 230, 230, 1);
+  background-color: #9a275a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgb(40, 40, 40, 1);
 `;
 
-const Container = styled.div`
-  width: 100%;
-  max-width: 720px;
-  background: rgba(255, 255, 255, 1);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px 6px 6px 0;
+const Photo = styled.div`
+  background-image: url(${ProfilePic});
+  background-position: center;
+  background-size: contain;
+  border: 5px solid #FFF;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: ${float} 3s ease-out infinite;
 `;
 
-const Greeting = styled(Container)`
-  font-size: 2rem;
-  color: rgba(220, 80, 70, 1);
-  font-weight: 200;
+const Title = styled.h1`
+  color: #e36588;
+  margin: 15px 0 0;
+  font-size: 3em;
 `;
 
-const Introduction = styled(Container)`
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: rgb(80, 80, 80, 1);
+const SubTitle = styled.h2`
+  color: rgb(240, 243, 189);
+  margin: 0;
+  font-weight: 400;
+`;
+
+const Content = styled.div`
+  background: #e36588;
+  padding: 0.5em 1em;
+  margin: 0.6em;
+  border-radius: 25px;
+  color: #9a275a;
+  font-size: 1em;
+  font-weight: 600;
 `;
 
 function App() {
   return (
     <AppWrapper>
-      <Greeting>
-        <span role="img" aria-label="Emoji of a man at the computer">
-          👨🏻‍💻
-        </span>{" "}
-        Hi. I'm Rafa.
-      </Greeting>
-      <Introduction>
-        I'm a software developer based in{" "}
-        <span role="img" aria-label="Emoji of the Australian flag">
-          🇦🇺
-        </span>{" "}
-        Melbourne - AU currently working at REA Group.
-      </Introduction>
+      <Photo></Photo>
+      <Title>
+        Rafael Valerio
+      </Title>
+      <SubTitle>
+        Lead Developer
+      </SubTitle>
+      <Content>REA / Bunnings / BuildPass</Content>
     </AppWrapper>
   );
 }
