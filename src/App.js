@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { COLORS } from "./variables";
 
 import ProfilePic from "./raf.jpg";
 
@@ -19,7 +20,7 @@ const float = keyframes`
 `;
 
 const AppWrapper = styled.div`
-  background-color: #9a275a;
+  background-color: ${COLORS.primary};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,13 +40,14 @@ const Photo = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #e36588;
+  color: ${COLORS.secondary};
   margin: 15px 0 0;
   font-size: 3em;
+  font-weight: 400;
 `;
 
 const SubTitle = styled.h2`
-  color: rgb(240, 243, 189);
+  color: ${COLORS.primaryVariant};
   margin: 0;
   font-weight: 400;
 `;
@@ -56,11 +58,11 @@ const Content = styled.div`
 `;
 
 const Pill = styled.span`
-  background: #e36588;
+  background: ${COLORS.accent};
   padding: 0.5em 1em;
   margin: 0.2em;
   border-radius: 25px;
-  color: #9a275a;
+  color: #fff;
   font-weight: 600;
 `;
 
