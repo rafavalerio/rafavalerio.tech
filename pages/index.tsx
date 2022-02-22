@@ -2,14 +2,17 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import Icon from '../components/Icon'
+import BackgroundParticles from '../components/BackgroundParticles'
+
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
+      <BackgroundParticles />
       <Head>
         <title>Rafa Valerio</title>
-        <meta name="description" content="Rafa Valerio personal website" />
+        <meta name="description" content="Rafa Valerio - Software engineer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -20,7 +23,7 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>
           Hey!
-          <br />I am a Software engineer based in{' '}
+          <br />I am a software engineer based in{' '}
           <span className={styles.highlight}>🇦🇺 Melbourne, Australia</span>.
         </p>
 
