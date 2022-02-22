@@ -33,5 +33,7 @@ export default function BackgroundParticles() {
     },
     detectRetina: true,
   }
+
+  // @ts-ignore
   return <Particles options={particlesOptions} className={styles.tsparticles} />
 }
